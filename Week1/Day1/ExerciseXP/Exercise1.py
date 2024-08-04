@@ -6,5 +6,4 @@
 # Hello world
 # Hello world
 
-for step in range (0, 4):
-    print("Hello world")
+print("Hello world\n" * 4)
