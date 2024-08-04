@@ -10,4 +10,4 @@ I love python
 I love python
 I love python
 '''
-print("Hello World\n" * 4,"I love python\n" * 4)
+print("Hello World\n" * 4 + "I love python\n" * 4)
