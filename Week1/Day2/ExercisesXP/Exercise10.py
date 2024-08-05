@@ -25,4 +25,4 @@ for item in sandwich_orders[:]:
     finished_sandwiches.append(sandwich_orders[0])
     sandwich_orders.remove(sandwich_orders[0])
 for i in range (0, len(finished_sandwiches)):
-    print (f"I made your {finished_sandwiches[i].lower()}")
+    print(f"I made your {finished_sandwiches[i].lower()}")
