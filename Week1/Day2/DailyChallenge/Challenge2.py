@@ -10,6 +10,6 @@ Final strings won’t include words with double letters (e.g. “passing”, “
 word = input("Please enter your word: ")
 result = word[0]
 for i in range (1, len(word)):
-    if word[i] != result[len(result) - 1]:
+    if word[i] != result[-1]:
         result = result + word[i]
 print(result)
