@@ -17,4 +17,9 @@ Then, the output should be:
 
 sentance = input("Please write a sentance: ")
 words_in_sentance = sentance.split()
-words_counter
+unique_words = []
+for i in range (0, len(words_in_sentance)):
+    if words_in_sentance[i] not in unique_words:
+        unique_words.append(words_in_sentance[i])
+for i in range (0, len(unique_words)):
+    print(f"{unique_words[i]} : {words_in_sentance.count(unique_words[i])}")
