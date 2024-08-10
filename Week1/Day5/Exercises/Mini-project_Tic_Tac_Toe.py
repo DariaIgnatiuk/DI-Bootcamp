@@ -1,4 +1,5 @@
 def print_board(board):
+    """ This function prints the tic tac toe board. Argument - global variable board"""
     print("\nTIC TAC TOE")
     print("*****************")
     for i in range(0,3):
@@ -8,6 +9,7 @@ def print_board(board):
     print("*****************")
 
 def player_input(player):
+    """ This function asks the player to enter the row and the column and checks if the stop is empty. Argument - player, "X" or "O" """
     print(f"Player {player}'s turn...")
     empty = True
     while empty:
@@ -20,6 +22,8 @@ def player_input(player):
             print("This spot is not empty. Try again")
 
 def check_win(board):
+    """This function check if there are 3 same marks in a row (up, down, across, or diagonally). 
+    Incoming argument is board. The function returns result - boolean"""
     result = False
     for i in range(0,3):
         if board[i][0] == board[i][1] == board[i][2] != ' ':
@@ -33,6 +37,7 @@ def check_win(board):
     return result
 
 def game (board):
+    """This finction calls player_input if the number of moves is less than 9 and no one has won yet"""
     number_of_moves = 0
     player = "X"
     print("Welcome to TIC TAC TOE!")
