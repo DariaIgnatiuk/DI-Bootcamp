@@ -22,7 +22,7 @@ class Farm:
         animals_types = []
         for key in self.animals:
             animals_types.append(key)
-        return(animals_types)
+        return(sorted(animals_types))
 
     def get_short_info(self):
         animal_types = self.get_animal_types()
@@ -33,8 +33,6 @@ class Farm:
             string += f" {animal_types[i]}s,"
         string += f" and {animal_types[i + 1]}s."
         return string 
-
-
 
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow',5)
