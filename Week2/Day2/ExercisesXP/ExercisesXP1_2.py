@@ -76,13 +76,14 @@ class Dog:
         else:
             print(f"{other_dog.name} wins {self.name} ")
 
-dog1 = Dog("Archie", 5, 10)
-dog2 = Dog("Buddy", 3, 5)
-dog3 = Dog("Nika", 12, 25)
+if __name__ == "__main__":
+    dog1 = Dog("Archie", 5, 10)
+    dog2 = Dog("Buddy", 3, 5)
+    dog3 = Dog("Nika", 12, 25)
 
-# dog1.fight(dog2)
-# dog1.fight(dog3)
-# dog2.fight(dog3)
+    dog1.fight(dog2)
+    dog1.fight(dog3)
+    dog2.fight(dog3)
  
 
 
