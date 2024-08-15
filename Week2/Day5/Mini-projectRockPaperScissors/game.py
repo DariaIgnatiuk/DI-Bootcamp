@@ -45,5 +45,5 @@ class Game:
             computer_item_result = "rock"
         else:
             computer_item_result = "paper"
-        print(f"You selected {user_item_result}. The computer selected {computer_item}. You {result}!")
+        print(f"You selected {user_item_result}. The computer selected {computer_item_result}. You {result}!")
         return result
