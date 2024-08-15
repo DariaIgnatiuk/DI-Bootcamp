@@ -1,7 +1,10 @@
+from pathlib import Path
+
+
 class AnagramChecker:
 
     def __init__(self):
-        f = open('/Users/dariaignatyuk/Desktop/DI-Bootcamp/Week2/Day5/Mini-projectAnagramChecker/word_list.txt')
+        f = open(Path(__file__).with_name('word_list.txt'))
         data = f.read()
         f.close()
         self.word_list = data.split("\n")
