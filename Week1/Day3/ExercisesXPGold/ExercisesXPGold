@@ -1,0 +1,53 @@
+# Exercise 1: Birthday Look-Up
+# Exercise 2: Birthdays Advanced
+# Exercise 3: Add Your Own Birthday
+
+# birthday = [
+#     {"name":"Daria", "birthday":"1989/01/01"},
+#     {"name":"Artem", "birthday":"1985/09/09"},
+#     {"name":"Alex", "birthday":"1999/12/20"},
+#     {"name":"Nika", "birthday":"2012/05/10"},
+#     {"name":"Bulka", "birthday":"2020/11/23"}
+# ]
+
+# user_name = input("Please enter your name: ")
+# user_birthday = input("Please enter your birthday in the format YYYY/MM/DD: ")
+# birthday.append({"name": user_name, "birthday":user_birthday})
+# print("You can look up the birthdays of the people in the list!\nHere is the list:")
+# for person in birthday:
+#     print(person["name"])
+# name = input("Please enter a name: ")
+# found = False
+# for person in birthday:
+#     if name ==person["name"]:
+#         print(f"{name}'s birthday is {person["birthday"]}")
+#         found = True
+# if not found:
+#     print(f"Sorry, we don’t have the birthday information for {name}.")
+
+
+# Exercise 4: Fruit Shop
+
+# items = {
+#     "banana": 4,
+#     "apple": 2,
+#     "orange": 1.5,
+#     "pear": 3
+# }
+
+# sentance = ""
+# for key in items:
+#     sentance += f" {key} costs {items[key] }"
+# print(sentance)
+
+items = {
+    "banana": {"price": 4 , "stock":10},
+    "apple": {"price": 2, "stock":5},
+    "orange": {"price": 1.5 , "stock":24},
+    "pear": {"price": 3 , "stock":1}
+}
+
+cost = 0
+for key in items:
+    cost += items[key]["price"] * items[key]["stock"] 
+print(f"It would cost {cost} to buy everything on the stock")
