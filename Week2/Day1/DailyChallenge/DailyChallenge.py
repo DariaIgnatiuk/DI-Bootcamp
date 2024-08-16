@@ -27,9 +27,12 @@ class Farm:
     def get_short_info(self):
         animal_types = self.get_animal_types()
         string = f"{self.name}'s farm has"
-        for i in range(len(animal_types) - 1):
-            string += f" {animal_types[i]}s,"
-        string += f" and {animal_types[i + 1]}s."
+        if len(animal_types) != 1:
+            for i in range(len(animal_types) - 1):
+                string += f" {animal_types[i]}s,"
+            string += f" and {animal_types[i + 1]}s."
+        else:
+            string += f" {animal_types[0]}s"
         return string 
 
 macdonald = Farm("McDonald")
