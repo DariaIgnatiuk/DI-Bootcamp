@@ -1,6 +1,66 @@
+import random
+
+gallows = [
+    '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''',
+    '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+========='''
+]
+
 def get_word():
     """returns a random word from the list"""
-    import random
     wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
     return random.choice(wordslist) 
 
@@ -21,17 +81,39 @@ def open_letter(letter,word,coded_word):
         if char_list[i] == letter:
             char_list_coded[i] = letter
     return "".join(char_list_coded)
+
+def win(coded_word):
+    if "*" not in coded_word:
+        return True
+    else:
+        return False
         
 
 def hangman():
     word = get_word()
-    print(word)
+    number_tries = 0
     coded_word = code_word(word)
-    print(f"Guess this word: {coded_word}")
-    letter = input("Please enter a letter: ")
-    if letter in word:
-        coded_word = open_letter(letter,word,coded_word)
-        print(coded_word)
-
+    named_letters = []
+    print(f"Guess this word: {coded_word}. You have {6 - number_tries} tries.")
+    while number_tries < 6 and not win(coded_word):
+        print(gallows[number_tries])
+        letter = input("Please enter a letter: ")
+        while letter in named_letters:
+            letter = input("You have already named this letter! Try again: ")
+        named_letters.append(letter)
+        if letter in word:
+            coded_word = open_letter(letter,word,coded_word)
+            print("You guessed a letter!")
+            print(coded_word)
+        else: 
+            number_tries += 1
+            print(f"You didn't guess the letter. You have {6 - number_tries} tries left")
+            print(coded_word)
+    if number_tries == 6:
+        print("You lost the game!")
+        print(gallows[number_tries])
+    else:
+        print("You won!")
+        
 
 hangman()
