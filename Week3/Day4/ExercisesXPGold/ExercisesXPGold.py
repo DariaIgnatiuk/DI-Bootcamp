@@ -1,9 +1,7 @@
 import hashlib
 import psycopg2
-import requests
 from dotenv import load_dotenv
 import os
-import bcrypt
 
 # DB connection
 load_dotenv()
@@ -20,15 +18,6 @@ connetion = psycopg2.connect(database = DB_NAME,
                              port = DB_PORT)
 
 cursor = connetion.cursor()
-
-# query = f"SELECT * FROM users"
-# cursor.execute(query)
-# users_list = cursor.fetchall()
-# connetion.commit()
-# converting list of tubles to a dictionary
-# users = {}
-# for user in users_list:
-#     users[user[0]] = int(user[1])
 
 def add_new_user(username, password):
     password_hash = hashlib.sha3_224()
