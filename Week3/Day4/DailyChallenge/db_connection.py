@@ -3,6 +3,7 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
+import random
 
 load_dotenv()
 DB_HOST = os.getenv('DB_HOST')
@@ -26,13 +27,16 @@ data = countries_api.json()
 
 # file_name = 'first_country.json'
 # with open(file_name, 'w') as file:
-#         json.dump(data[0], file, indent=2)    
+#         json.dump(data[0], file, indent=2)
+# 
+#     
 for i in range(10):
-    name = data[i]['name']['common']
-    capital = data[i]['capital'][0].replace('\'','') 
-    flag_code = data[i]['flag']
-    subregion = data[i]['region']
-    population = data[i]['population']
+    country = random.choice(data)
+    name = country['name']['common']
+    capital = country['capital'][0].replace('\'','') 
+    flag_code = country['flag']
+    subregion = country['region']
+    population = country['population']
 
 
     query = f'''INSERT INTO random_countries 
