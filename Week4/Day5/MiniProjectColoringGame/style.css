@@ -1,17 +1,17 @@
 .body{
-    margin: 0px;
+    border: 1px solid black; 
 }
 
 .square{
-  width: 14px;
-  height: 28.5px;
+  width: 17.25px;
+  height: 25.5px;
   border: 1px solid Gainsboro; 
   background-color: white;
 }
 
 .color{
-    width: 72px;
-    height: 89.5px;
+    width: 74px;
+    height: 79px;
     border: 1px solid black; 
     margin: 3px;
   }
@@ -29,7 +29,13 @@
 
 #palette{
     text-align: center;
+    padding:3px;
 }
+
+#canvas{
+    padding:3px;
+}
+
 #buttonClear{
     width: 230px;
     height: 72px;
