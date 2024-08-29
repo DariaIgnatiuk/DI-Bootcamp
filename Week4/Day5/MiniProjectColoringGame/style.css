@@ -1,0 +1,41 @@
+.body{
+    margin: 0px;
+}
+
+.square{
+  width: 14px;
+  height: 28.5px;
+  border: 1px solid Gainsboro; 
+  background-color: white;
+}
+
+.color{
+    width: 72px;
+    height: 89.5px;
+    border: 1px solid black; 
+    margin: 3px;
+  }
+
+.row{
+    display: flex;
+    flex-direction:row;
+}
+
+#container{
+    display: flex;
+    flex-direction:row;
+    background-color: lightgray;
+}
+
+#palette{
+    text-align: center;
+}
+#buttonClear{
+    width: 230px;
+    height: 72px;
+    font-size: 22px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+}
+
