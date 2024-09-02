@@ -171,3 +171,55 @@
 
 //  Exercise 8 : Juice Bar
 
+// Part I:
+// 1. The outer function named makeJuice receives 1 argument: the size of the beverage the client wants - small, medium or large.
+
+// 2. The inner function named addIngredients receives 3 ingredients, and displays on the DOM a sentence like The client wants a 
+// <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
+
+// 3. Invoke the inner function ONCE inside the outer function. Then invoke the outer function in the global scope.
+
+// let nav = document.getElementById('navigation');
+
+// function makeJuice(size){
+//     function addIngredients(first, second,third){
+//         return `<div>The client wants a ${size} juice, containing ${first}, ${second}, ${third}</div>`;        
+//     }
+//     return addIngredients('pineapple', 'mango', 'rum');
+// }
+
+// nav.innerHTML = makeJuice('large');
+
+
+
+// Part II:
+// 1. In the makeJuice function, create an empty array named ingredients.
+
+// 2. The addIngredients function should now receive 3 ingredients, and push them into the ingredients array.
+
+// 3. Create a new inner function named displayJuice that displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
+
+// 4. The client wants 6 ingredients in his juice, therefore, invoke the addIngredients function TWICE. Then invoke once the displayJuice function. Finally, invoke the makeJuice function in the global scope.
+
+function makeJuice(size){
+    let ingredients = [];
+
+    function addIngredients(first, second, third){
+        ingredients.push(first, second, third);
+    };
+
+    function displayJuice(){
+        let ingredientsList = '';
+        for (i = 0; i < ingredients.length -1; i++) {
+            ingredientsList += ingredients[i] + ', ';
+        }
+        ingredientsList += ingredients[ingredients.length - 1];
+        document.getElementById('navigation').innerHTML = `<div>The client wants a ${size} juice, containing ${ingredientsList}</div>`;
+    };
+    
+    addIngredients('pineapple', 'mango', 'rum');
+    addIngredients('salary', 'cucumber', 'apple');
+    displayJuice();
+}
+
+makeJuice('large');
