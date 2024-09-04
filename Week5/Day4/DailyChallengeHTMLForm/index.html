@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <form method = "GET" action = "index.html">
+            <input type="text" name="first_name" placeholder="John"/>
+            <input type="text" name="last_name" placeholder="Doe"/>
+            <input type="submit" id="submit" value="Send"/>
+    </form>
+
+    <script>
+        let button = document.getElementById('submit');
+        button.addEventListener('click', getinfo);
+        function getinfo(e){
+            e.preventDefault();
+        let first_name = document.getElementsByName("first_name")[0];
+        let last_name = document.getElementsByName("last_name")[0];
+        user = {name:first_name.value, lastname: last_name.value};
+        jsonUser = JSON.stringify(user);
+        document.body.append(jsonUser)
+        }
+
+        
+    </script>
+</body>
+</html>

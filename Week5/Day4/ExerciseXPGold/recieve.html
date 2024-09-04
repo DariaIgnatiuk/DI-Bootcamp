@@ -13,7 +13,7 @@
         let recievedLink = new URLSearchParams(window.location.search);
         const firstName = recievedLink.get('first_name');
         const lastName = recievedLink.get('last_name');
-        message = `<div>We recieved your info, ${firstName} ${lastName}</div>`
+        message = `<div>We have recieved your info, ${firstName} ${lastName}</div>`
         document.body.innerHTML += message;
     </script>    
 </body>
