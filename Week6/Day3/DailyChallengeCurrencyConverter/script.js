@@ -21,11 +21,16 @@ function showDropdown(codes){
 }
 
 function convert(rate){
-    console.log(rate);
     let amount = document.getElementsByName('amount')[0].value;
-    console.log(amount);
     document.getElementById('result').value = amount * rate;
-    
+}
+
+function switchCurrencies(e){
+    let from = dropdownFrom.value;
+    let to = dropdownTo.value;
+    dropdownFrom.value = to;
+    dropdownTo.value=from;
+    getConvertRate(e);
 }
 
 async function getConvertRate(e){

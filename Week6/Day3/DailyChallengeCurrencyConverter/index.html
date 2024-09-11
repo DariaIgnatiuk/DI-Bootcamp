@@ -18,14 +18,15 @@
                 <select name='from'>
                     <option>USD - United States Dollar</option>`
                   </select>
+                <img src="https://www.iconpacks.net/icons/2/free-convert-icon-3209-thumb.png" height="50" id="switch" onClick="switchCurrencies(event)">
                 <p>To:</p><br/>
                 <select name='to' id="to">   
                     <option>ILS - Israeli New Shekel</option>`
                   </select>
                 <p>Amount:</p><br/>
                 <div>
-                    <input type="text" name="amount" placeholder="0"/>
-                    <input type="submit" value="Convert" onClick="getConvertRate(event)">
+                    <input type="text" name="amount" id="amount" placeholder="0"/>
+                    <input type="submit" value="Convert" id="button" onClick="getConvertRate(event)">
                 </div>
                 <br>
                 <output id="result"></output>
