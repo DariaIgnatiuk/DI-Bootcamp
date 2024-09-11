@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <script src="script.js" defer></script>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="box">
+        <h2>Currency Converter</h2>
+        <form>
+               <p>From:</p> <br/>
+                <select name='from'>
+                    <option>USD - United States Dollar</option>`
+                  </select>
+                <p>To:</p><br/>
+                <select name='to' id="to">   
+                    <option>ILS - Israeli New Shekel</option>`
+                  </select>
+                <p>Amount:</p><br/>
+                <div>
+                    <input type="text" name="amount" placeholder="0"/>
+                    <input type="submit" value="Convert" onClick="getConvertRate(event)">
+                </div>
+                <br>
+                <output id="result"></output>
+
+        </form>
+        
+    </div>
+
+</body>
+</html>
