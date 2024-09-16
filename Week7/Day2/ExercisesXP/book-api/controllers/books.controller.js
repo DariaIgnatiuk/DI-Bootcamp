@@ -27,7 +27,6 @@ const createBook = async (req, res) => {
     const { title, author, publishedyear } = req.body;
     try {
       const data = await _createBook(title, author, publishedyear);
-      console.log(data);
       getAllBooks(req,res);
     } catch (error) {
       res.status(402).json({message:"something is wrong"})

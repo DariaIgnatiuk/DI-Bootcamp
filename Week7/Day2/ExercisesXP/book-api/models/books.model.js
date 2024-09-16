@@ -9,7 +9,6 @@ const _getBookById = (id) =>{
 }
 
 const _createBook = (title, author, publishedyear ) => {
-    console.log(title, author, publishedyear );
     return db('books').insert({ title, author, publishedyear });
   };
 
