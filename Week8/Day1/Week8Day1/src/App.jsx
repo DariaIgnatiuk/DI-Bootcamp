@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import UserFavovireAnimals from './components/UserFavoriteAnimals';
 import Exercise from './components/Exercise3';
+import DemoCarousel from './components/Carousel';
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
     {/* Exercise 2 : Object */}
     {/* <p>{user.firstName} {user.lastName}</p>
     <UserFavovireAnimals animals={user.favAnimals}/> */}
-    <Exercise/>
+    {/* <Exercise/> */}
+    <DemoCarousel/>
     </>
   )
 }
