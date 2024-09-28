@@ -1,0 +1,41 @@
+body{
+  background-color: green;
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+div{
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  text-align: right;
+  max-width: 35rem;
+  margin: 100px auto 0;
+}
+
+#quote{
+  color:green;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin:20px;
+  padding-top: 20px;
+}
+
+#author{
+  color:green;
+  margin: 20px;
+  font-style: italic;
+}
+
+button{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+}
