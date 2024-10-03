@@ -46,7 +46,6 @@ const taskReducer = (state, action) => {
       return  {...state, activeTasks: activeTasks, show:'active'}
     }
   }
-  
   return state;
 }
 
