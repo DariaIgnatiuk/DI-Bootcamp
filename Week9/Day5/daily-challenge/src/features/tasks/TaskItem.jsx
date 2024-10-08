@@ -1,21 +1,18 @@
 import TaskRemove from './TaskRemove.jsx';
 import TaskEdit from './TaskEdit.jsx';
-import {complete} from './state/slice.js'
-import {useDispatch} from 'react-redux'
+import { useCompleteTask } from './state/hooks.js';
 import './tasks.css'
 
 const TaskItem = (props) => {
     const {task} = props
-    const dispatch = useDispatch();
+    
+    const callCompleteTask = useCompleteTask()
 
-    const changeStatus = ()=> {
-        dispatch(complete(task.id)); 
-    }
     return (
         <>
                 <div className={task.active? '':'active'}>
-                    <span onClick={()=>changeStatus()}>
-                    {task.task} {task.dueDate}
+                    <span onClick={()=>callCompleteTask(task.id)}>
+                    {task.task} ({task.category}) 
                     </span>
                     <TaskEdit id={task.id}/>
                     <TaskRemove id={task.id}/>
