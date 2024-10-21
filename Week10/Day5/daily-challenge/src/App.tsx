@@ -1,4 +1,4 @@
-
+import DataFetcher from './components/DataFetcher'
 import './App.css'
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+    <DataFetcher/>
     </>
   )
 }
