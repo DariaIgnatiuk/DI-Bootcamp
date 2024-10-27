@@ -1,7 +1,7 @@
 import store from "../features/store";
 
 export interface Recipe {
-    recipeReducer?: any;
+    // recipeReducer?: any;
     Meal: string;
     Ingrediants:string;
     Intruction:string;
